@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html{
+            height: 100%;
+        }
+
+        body{
+            background-image: url(imagens/background_login.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+
+        .box-login{
+            width: 300px;
+            height: 400px;
+            background-color: #ffffff78;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 20px;
+            border-radius: 10%;
+        }
+
+        .box-login .boneco{
+            background-image: url(imagens/login-de-usuario.png);
+            background-position: center;
+            background-size: cover;
+            width: 100px;
+            height: 100px;
+            margin-right: 60px;
+            margin-bottom: 15px;
+        }
+
+        .box-login label{
+            display: block;
+            color: #ffffff;
+        }
+
+        .box-img{
+            display: flex;
+            align-items: center;
+        }
+
+        .box-login input[type='text'], input[type='password']{
+            width: 100%;
+            line-height: 35px;
+            border: none;
+        }
+
+        .box-login input[type='text']{
+            margin-bottom: 20px;
+        }
+
+        .box-login a{
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .box-login input[type='submit']{
+            display: block;
+            width: 100%;
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: #bb4a26;
+            color: #ffffff;
+            border: 0;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo img {
+            width: 75px;
+            height: auto;
+        } 
+      </style>
+</head>
+<body>
+    <div class="box-login">
+        <div class="box-img">
+            <div class="boneco"></div>
+            <div class="texto-login"><h2>Login</h2></div>
+        </div><!--box-img-->
+
+        <form>
+            <label>Usuário</label>
+            <input type="text">
+            <label>Senha</label>
+            <input type="password">
+
+            <a href="#">Esqueceu a senha?</a>
+
+            <input type="checkbox">
+            <span>Lembrar-me</span>
+
+            <input type="submit" value="Login">
+        </form>
+    </div><!--box-login-->
+
+    <footer>
+        <div class="footer-content">
+            <span>&copy; 2024 Silvia Akiba. Desenvolvido para fins educacionais.</span>
+            <div class="footer-logo">
+                <img src="imagens/logo.png" alt="Logo" style="border-radius: 50%;">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente em Texto</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .texto{
+            font-size: 135px;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #6a9ad4, #2bb0c8, #29c4ae, #b1da88, #6a9ad4);
+            background-size: 400% 100%;
+            animation: degrade 10s linear infinite alternate;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            outline: none;
+        }
+
+        .poppins-black {
+            font-family: "Poppins", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+        }
+        @keyframes degrade {
+           0%{
+            background-position-x: 0%;
+           } 
+
+           100%{
+            background-position: 400%;
+           }
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo img {
+            width: 75px;
+            height: auto;
+        } 
+    </style>
+</head>
+<body>
+    <div contenteditable="true" class="texto poppins-black">
+        BOM DIA!!!
+    </div><!--texto-->
+
+    <footer>
+        <div class="footer-content">
+            <span>&copy; 2024 Silvia Akiba. Desenvolvido para fins educacionais.</span>
+            <div class="footer-logo">
+                <img src="imagens/logo.png" alt="Logo" style="border-radius: 50%;">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
